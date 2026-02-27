@@ -1,0 +1,1 @@
+The bootloader is a small, yet critical program responsible for loading the OS kernel. Removing or corrupting the Bootloader will make the system inoperable. 
