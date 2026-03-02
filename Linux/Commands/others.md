@@ -1,14 +1,15 @@
 # whoami
-#linux 
 
 Prints the current logged user
 
 Example:
 
-    > whoami
-    flash/kobyv
-	
+```sh
+> whoami
+system/user_123
+```
 # pwd
+
 Prints the current working directory
 
 Example:
@@ -22,7 +23,7 @@ Shows the location of the command script
 
 Example:
 
-```
+```sh
 > which java
 > /usr/bin/java
 > which which

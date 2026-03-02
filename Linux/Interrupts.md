@@ -1,4 +1,3 @@
-
 When an Interrupt is invoked
 
 1. the processor is interrupted

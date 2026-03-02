@@ -5,4 +5,6 @@ Show a listing of last logged in users.
 
 Usage:
 
-	last
+```sh
+last
+```

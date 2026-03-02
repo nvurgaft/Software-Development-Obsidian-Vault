@@ -12,11 +12,15 @@ The use cases for TMUX are
 
 Usage
 
-	tmux
+```sh
+tmux
+```
 
 Starts tmux with a default window
 
-	tmux new -t <name>
+```sh
+tmux new -t <name>
+```
 
 Starts tmux with a new named window, where the name is `<name>` 
 

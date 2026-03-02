@@ -16,14 +16,14 @@ To force a program to terminate immediately (this is usually employed if the abo
     $ kill -9 <pid>
 	
 Print a signal's name 
-```
+```sh
 $ kill -l 9
 KILL
 ```
 
 Prints all the supported signals 
 
-```
+```sh
 $ kill -l
 
 1) SIGHUP 2) SIGINT 3) SIGQUIT 4) SIGILL 5) SIGTRAP

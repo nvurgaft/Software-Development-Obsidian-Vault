@@ -1,4 +1,3 @@
-
 Sends HTTPS requests towards a target on the web
 
 `curl http://www.google.com`

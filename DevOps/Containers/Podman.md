@@ -1,24 +1,24 @@
-Manage pods, containers and images
+Podman is a daemonless, rootless=first container engine designed to be more secure and Kubernetes friendly
 
-Cheat Sheet
+#### Some common commands
 
 ```sh
 podman ps
 ```
 
-Shows all the containers running in the system
+List all the containers running in the system
 
 ```sh
 podman images
 ```
 
-Shows all the images registered in the system
+List all the images registered in the system
 
 ```sh
 podman exec <container> <command>
 ```
 
-Runs a command inside a container, e.g.
+Run a command inside a container, e.g.
 
 ```sh
 podman exec hpi-ustlo ls /
