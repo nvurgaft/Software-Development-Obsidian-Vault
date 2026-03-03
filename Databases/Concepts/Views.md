@@ -43,7 +43,7 @@ CREATE VIEW view_name AS ...query...
 CREATE OR REPLACE VIEW view_name AS query
 ```
 
-Example: 
+Examples: 
 
 Create a View:
 ```sql

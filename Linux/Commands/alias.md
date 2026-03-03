@@ -21,6 +21,4 @@ Example
 
 Will open the current user's `.bashrc` file using vim
 
-Pitfall !!
-
-aliases are not persistent across system reboots, to persist them. write them inside a `.bashrc` file
+It is important to remember that aliases do not persist over system reboots. To persist them, write them into a [[bashrc|.bashrc]] file.

@@ -1,4 +1,4 @@
-Use specialized data structured as a caching layer between you application logic and the persistence layer. Caching allows us to reduce database hits and get data faster using in memory cache for the cost of complexity and the possibility of receiving stale cached values.
+Use specialized data structures as a caching layer between you application logic and the persistence layer. Caching allows us to reduce database hits and get data faster using in memory or durable cache for the cost of complexity and the possibility of receiving stale cached values.
 Cache mechanisms map keys to stored values for storage and retrieval. 
 
 #### Workflow
@@ -9,12 +9,12 @@ Cache mechanisms map keys to stored values for storage and retrieval.
 
 Caches are usually implemented using hash maps for $O(1)$ read and write complexity. Using other data structures to keep consistency and implement eviction policies.
 
-Pros
+**Pros**
 * Reduce database hits, resulting in less throughput on the service.
 * Faster retrieval of data, has your value stored in memory instead of reading stored data in disk.
 * Allows up to specify capacity and eviction policies.
 
-Cons
+**Cons**
 * Additional complexity.
 * Additional cost of memory usage.
 * Additional cost of synchronizing duplicate data.
@@ -22,7 +22,7 @@ Cons
 
 ## Eviction Policies
 
-In real life situations we cannot allow our cache to grow without any imposed limit, we want to specify eviction of old or unused key-value pairs, if some database values are more frequently accessed than others, we would like them on the cache in favor of others.
+In real life situations we cannot allow our cache to grow without limit, we want to specify eviction rules for old or unused key-value pairs, if some database values are more frequently accessed than others, we would like them cached and retained more then others.
 
 #### LRU (Least Recently Used)
 Define a cache size and when new key-value pairs are added, if the size limit is reached, the least recently used key-value will be evicted.

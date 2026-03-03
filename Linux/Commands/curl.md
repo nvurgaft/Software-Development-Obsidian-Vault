@@ -14,4 +14,4 @@ Will return a warning because of a lack of authentication schema provided to acc
 
 `curl -k https://www.some_site.org`
 
-Will some times succeed because  `-k` will tell curl to trust all certificates.
+May succeed at time because  `-k` will tell curl to trust all certificates.

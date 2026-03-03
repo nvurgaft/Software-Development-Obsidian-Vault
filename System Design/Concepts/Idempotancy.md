@@ -1,16 +1,15 @@
 An operation is idempotent if performing it multiple times has the same effect as performing it only once.
 
-Meaning if a client performed an action multiple times or send a request multiple times, the system would behave as though the action or request happened once.
+Meaning if a client performed an action multiple times or send a request multiple times, the affected system would behave as though the action or request happened once.
 
-Idempotency is important when making sure an operation needs to run once and only once. For example poor network conditions may prompt a client to resend a request after a timeout was reached, even though the original request reached the server and changed it's state. 
-If the operation is not idempotent the operation will run twice and change the server state twice.
+Idempotency is important when making sure an operation needs to run once and only once in situations when such operations can occur multiple times. For example poor network conditions may prompt a client to resend a request after a timeout was reached, even though the original request reached the server processed it. 
 
-Common cases are 
+**Common cases**
+* Double charges.
+* Duplicate orders.
+* Handling UI events.
 
-* Double charges
-* Duplicate orders
-
-In the HTTP specifications, the `PUT` verb describe an idempotent operation.
+In the [[Representational State Transfer (REST)]] specifications, the `PUT` verb/operation describes an idempotent operation.
 
 ### How to implement Idempotency
 
