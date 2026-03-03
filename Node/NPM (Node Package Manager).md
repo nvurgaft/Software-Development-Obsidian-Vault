@@ -20,16 +20,16 @@ A new `package.json` file will be created
 
 ```json
 {                                                                                     
-  "name": "test",                                                                     
-  "version": "1.0.0",                                                                 
-  "description": "",                                                                  
-  "main": "index.js",                                                                 
-  "scripts": {                                                                        
-    "test": "echo \"Error: no test specified\" && exit 1"                             
-  },                                                                                  
-  "keywords": [],                                                                     
-  "author": "",                                                                       
-  "license": "ISC"                                                                    
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },                                                                             
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
 ```
 

@@ -15,10 +15,11 @@ Caches are usually implemented using hash maps for $O(1)$ read and write complex
 * Allows up to specify capacity and eviction policies.
 
 **Cons**
-* Additional complexity.
+* Additional layer of complexity.
 * Additional cost of memory usage.
 * Additional cost of synchronizing duplicate data.
 * Can we afford end users receiving stale data ?
+* How do we invalidate the data ? We let the cache or the database decide ?
 
 ## Eviction Policies
 
