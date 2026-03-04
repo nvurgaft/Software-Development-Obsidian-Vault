@@ -21,6 +21,8 @@ Caches are usually implemented using hash maps for $O(1)$ read and write complex
 * Can we afford end users receiving stale data ?
 * How do we invalidate the data ? We let the cache or the database decide ?
 
+Some popular caching solutions are [ehcache](https://www.ehcache.org/), [redis](https://redis.io/solutions/caching/), [memcached](https://www.memcached.org/) and [caffeine](https://github.com/ben-manes/caffeine).
+
 ## Eviction Policies
 
 In real life situations we cannot allow our cache to grow without limit, we want to specify eviction rules for old or unused key-value pairs, if some database values are more frequently accessed than others, we would like them cached and retained more then others.

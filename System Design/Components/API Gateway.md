@@ -1,8 +1,8 @@
-An API Gateway is a server that sits between [[client|clients]] and your backend services and acts as a single entry point into your system.
+An API Gateway is a server that sits between [[client|clients]] and your backend services and acts as a single entry point into your system. The gateway is the entryway into your architecture and acts similarly to a [[Reverse Proxy]].
 
 Instead of clients talking directly to multiple microservices, they talk to the API Gateway — and the gateway routes the request to the correct service.
 
-A different Gateway can be used for client type, a Gateway for a web client and a separate gateway from a mobile client.
+A different Gateway can be used for client type, a Gateway for a web client and a separate gateway from a mobile client offering different sets of features.
 
 ### Trade offs
 
@@ -17,37 +17,20 @@ A different Gateway can be used for client type, a Gateway for a web client and 
 2. Adds a network hop which adds to latency.
 3. Adds complexity to the architecture, the gateway is another actor with critical application logic.
 
-### Responsibilities
+### What API Gateways do
 
-#### Routing
-
-A client may send a request to the backend, the request is intercepted by the API Gateway and the request is being routed to the appropriate service. Many services may receive the request from the client and the matter is completely invisible to the end-user.
+1. **Routing** - A client may send a request to the backend, the request is intercepted by the API Gateway and the request is being routed to the appropriate service. Many services may receive the request from the client and the matter is completely invisible to the end-user.
 
 A call to `/api/users` may reach the users service (authentication and authorization), but a call to `/api/orders` will reach the orders service.
 
-#### Authentication and Authorization
-
-Instead of each service handling authentication, the Gateway centralizes it.
-
-#### Caching
-
-[[Caching]] can be used on the API Gateway is a centralized to reduce hops and ease service access.
-
-#### Rate Limiting
-
-Because all client requests go trough the Gateway, it perfect central point to rate limit requests to the system and block suspicious traffic. Give less rate limitation to premium users. 
-
-#### Load Balancing
-
-Load balance requests among services.
-
-#### Transform requests and responses
-
-Modify content types, convert data formats. 
-
-#### Logging and Monitoring
-
-The gateway is a central place useful to gather user metrics, tracing and to audit log.
+2. **Authentication and Authorization** -Instead of each service handling authentication, the Gateway centralizes it.
+3. **Caching** - [[Caching]] can be used on the API Gateway is a centralized to reduce hops and ease service access.
+4. **Rate Limiting** - Because all client requests pass trough the Gateway, it perfect central point to rate limit requests to the system and block suspicious traffic. Give less rate limitation to premium users. 
+5. **Load Balancing** - Load balances traffic and requests among services.
+6. **Protocol translation/transformation** - Modify content types, convert data formats. Because the gateway can call to multiple services that can utilize different communication protocols, the client request may be needed to transform into multiple different formats.
+7. **Logging and Monitoring** - The gateway is a central place useful to gather user metrics, tracing and [[Auditing|auditing]].
+8. **IP Whitelisting** - It allows only a set of IP addresses to use the API. 
+9. **Response aggregation** - detailed below ...
 
 ### Response Aggregation
 
@@ -93,7 +76,7 @@ Get all responses, aggregate them into a overall response
 
 **Pros**
 
-1. Simplifies client code and requesting logic
+1. Simplifies client code and reques logic
 2. Decoupling by the gateway, the gateway can change target services without affecting client code.
 3. Decoupling, the client side doesn't know it speaks with a gateway instead of a service.
 
