@@ -1,3 +1,4 @@
+Sometimes your database instances may fail entirely which my reduce the performance of your deployment, because of this, it is important to have a backed up, a ready to go instance to take it's place as soon as possible.
 ### Cold standby
 
 Have a backup of a server or a database being made periodically and using it on the event the main instance fails. 
