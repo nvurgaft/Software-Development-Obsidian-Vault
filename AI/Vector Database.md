@@ -1,0 +1,1 @@
+A vector database is a specialized type of [[Databases Overview|Database]] designed to store and manage vector embeddings, which are numerical representations of data like text, images, or audio. It allows for efficient searching and retrieval of semantically similar data points, making it useful for applications such as recommendation systems and semantic search.
