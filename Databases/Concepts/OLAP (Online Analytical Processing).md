@@ -16,7 +16,7 @@ Instead Use [[ETL (Extract, Transform, Load)]]/[[ELT (Extract, Load, Transform)]
 * Heavy queries of big data. 
 * Large scans of data and aggregations.
 * High latency (queries can read large datasets). 
-* Denormalized data.
+* [[Denormalization|Denormalized]] data.
 * Queries that can take from seconds to minutes to return processed data.
 ```sql
 SELECT customer_id, count(*)

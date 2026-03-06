@@ -1,4 +1,4 @@
-[[Normalization|Normalized data]] is stored using normal forms, they use less storage space, require more look up to fetch specific data, easy to update.
+In relational databases [[Normalization|normalized data]] is stored using normal forms, normalized data uses less storage space, data retrieval requires more lookup time, but data is easy to update.
 We write queries that join [[Table]] data because the data is separated.
 
 Example:
@@ -13,7 +13,7 @@ Example:
 | ----------- | ----- | -------- |
 | 123         | Frank | 555-1234 |
 | 451         | John  | 555-5233 |
-Denormalized data has everything in one table, as if tables were joined together. requires more storage space, easy single lookups, harder to update
+Denormalized data has everything in one table, as if tables were joined together. Such data requires more storage space due to possible duplication, lookups are easier if the data is indexed, data is easy to append or add (if sorted).
 
 Example:
 

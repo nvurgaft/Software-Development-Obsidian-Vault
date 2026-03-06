@@ -2,7 +2,7 @@ In SQL a foreign key is a column or a group of columns that relates to a [[Prima
 Foreign keys are used to link (join) related dat from two, or more, tables.
 
 Example:
-```sql
+```postgresql
 CREATE TABLE customers (
 	id INT PRIMARY KEY,
 	name VARCAHR(255) NOT NULL,
@@ -26,8 +26,7 @@ Because foreign keys reference primary key values in another table, it is not po
 
 Cases for update or delete are also supported using the `ON DELETE` and `ON UPDATE` constraints.
 
-```sql
-  
+```postgresql
 CREATE TABLE contacts( 
 	id INT, 
 	customer_id INT, 

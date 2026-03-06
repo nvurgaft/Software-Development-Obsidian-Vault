@@ -2,7 +2,7 @@ In database theory, the **CAP theorem**, also named **Brewer's theorem** aft
 
 **Consistency**
 
-Every read receives the most recent write or an error. Consistency means that all clients see the same data at the same time, no matter which node they connect to. For this to happen, whenever data is written to one node, it must be instantly forwarded or [replicated](https://en.wikipedia.org/wiki/Replication_\(computing\)) to all the other nodes in the system before the write is deemed ‘successful’. Consistency as defined in the CAP theorem is quite different from the consistency guaranteed in [ACID](https://en.wikipedia.org/wiki/ACID "ACID") [database transactions](https://en.wikipedia.org/wiki/Database_transaction "Database transaction").
+Every read receives the most recent write or an error. Consistency means that all clients see the same data at the same time, no matter which node they connect to. For this to happen, whenever data is written to one node, it must be instantly forwarded or replicated to all the other nodes in the system before the write is deemed ‘successful’. Consistency as defined in the CAP theorem is quite different from the consistency guaranteed in [ACID](https://en.wikipedia.org/wiki/ACID "ACID") [database transactions](https://en.wikipedia.org/wiki/Database_transaction "Database transaction").
 
 Weak consistency means that some data may be missing or not fresh.  However, eventually, the data will be consistent.
 

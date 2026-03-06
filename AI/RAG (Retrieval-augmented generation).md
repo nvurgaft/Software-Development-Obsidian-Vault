@@ -14,12 +14,17 @@ These are several known phenomena is AI models that necessitate the use of DAG
 2. Outdated Knowledge - The training data collected may be old and not up to data with new relevant data, a model trained with data from a past timeframe will be unaware of new trends, discoveries and occurrences. Adding DAG functionality will allow it to retrieve new data.
 3. Limited domain expertise - LLM models my lack certain depth needed in a specific domain to answer related questions, thus the model may answer in a limited and inaccurate fashion leading to errors and even deliberate inaccuracies when the model tries to fill the gaps on it's own.
 
+### Components in RAG
+
+* Generators - AI models that accept and return natural human language responses based on training data.
+* Vector databases - These store vector embeddings that allow retrieval of data based on similarity to other data. These are optimized for AI systems.
+* Retrievers - Algorithms that match queries that documents.
+
 ### How RAG works
 
 RAG combines two core processes: **retrieval** and **generation**. Together, they create a feedback loop that enhances the quality and relevance of AI-generated content.
 
 - **Retrieval**: When a query is received, the system uses a retriever to search a knowledge base for relevant documents. These are often stored in a [[Vector Database]] like Pinecone or FAISS, which enables fast similarity searches using embeddings. The retriever converts the query into a vector and finds the closest matches.
-    
 - **Generation**: The retrieved documents are passed to a generator, typically an LLM, which uses them to produce a response. The model incorporates the external context into its output, making it more accurate and informative.
 
 Source: https://github.com/resources/articles/software-development-with-retrieval-augmentation-generation-rag

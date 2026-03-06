@@ -9,7 +9,6 @@ Change Data Capture is about identifying can capturing data changes made inside 
 * Automating cache invalidation.
 * An alternative to [[ELT (Extract, Load, Transform)]] that runs when data is changed.
 
-
 ### Trigger Based CDC
 
 In [[Triggers]] based CDC, custom triggers attached to tables run specific logic when data is being inserted or updated.
