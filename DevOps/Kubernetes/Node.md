@@ -6,12 +6,33 @@ Run on every node, maintaining running pods and providing the Kubernetes runtime
 
 [kubelet](https://kubernetes.io/docs/concepts/architecture/#kubelet)
 
-Ensures that Pods are running, including their containers.
+Kubelet is the agent running on each node, it ensures that Pods and their containers are running properly and .
 
 [kube-proxy](https://kubernetes.io/docs/concepts/architecture/#kube-proxy) (optional)
 
-Maintains network rules on nodes to implement [Services](https://kubernetes.io/docs/concepts/services-networking/service/).
+Managers discovery and network rules on nodes to implement [Services](https://kubernetes.io/docs/concepts/services-networking/service/).
 
 [Container runtime](https://kubernetes.io/docs/concepts/architecture/#container-runtime)
 
 Software responsible for running containers.
+
+```
+                    Control Plane
+                 ┌─────────────────┐
+                 │  API Server     │
+                 │  Scheduler      │
+                 │  Controllers    │
+                 │  etcd           │
+                 └────────┬────────┘
+                          │
+                          │
+               ┌──────────┴──────────┐
+               │                     │
+           Worker Node           Worker Node
+        ┌─────────────────┐   ┌─────────────────┐
+        │ kubelet         │   │ kubelet         │
+        │ kube-proxy      │   │ kube-proxy      │
+        │ containerd      │   │ containerd      │
+        │ Pods            │   │ Pods            │
+        └─────────────────┘   └─────────────────┘
+```
