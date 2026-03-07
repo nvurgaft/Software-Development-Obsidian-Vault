@@ -1,5 +1,4 @@
-Podman is a daemonless, rootless=first container engine designed to be more secure and Kubernetes friendly
-
+Podman is a daemon-less, rootless first container engine designed to be more secure and Kubernetes friendly
 #### Some common commands
 
 ```sh

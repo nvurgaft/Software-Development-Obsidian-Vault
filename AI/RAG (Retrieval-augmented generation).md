@@ -8,7 +8,7 @@ Source: https://en.wikipedia.org/wiki/Retrieval-augmented_generation
 
 ### Known Issues
 
-These are several known phenomena is AI models that necessitate the use of DAG 
+These are several known phenomena is AI models that necessitate the use of RAG 
 
 1. Hallucinations - The AI may some times generate fabricated, inaccurate data or information that is unsupported  by it's training data. The response may sound convincing but they are incorrect.
 2. Outdated Knowledge - The training data collected may be old and not up to data with new relevant data, a model trained with data from a past timeframe will be unaware of new trends, discoveries and occurrences. Adding DAG functionality will allow it to retrieve new data.
@@ -26,5 +26,9 @@ RAG combines two core processes: **retrieval** and **generation**. Together, 
 
 - **Retrieval**: When a query is received, the system uses a retriever to search a knowledge base for relevant documents. These are often stored in a [[Vector Database]] like Pinecone or FAISS, which enables fast similarity searches using embeddings. The retriever converts the query into a vector and finds the closest matches.
 - **Generation**: The retrieved documents are passed to a generator, typically an LLM, which uses them to produce a response. The model incorporates the external context into its output, making it more accurate and informative.
+
+### RAG poisoning
+
+RAG systems may retrieve factually correct but misleading sources, leading to errors in interpretation. In some cases, an LLM may extract statements from a source without considering its context, resulting in an incorrect conclusion. Additionally, when faced with conflicting information, RAG models may struggle to determine which source is accurate. The worst case outcome of this limitation is that the model may combine details from multiple sources producing responses that merge outdated and updated information in a misleading manner.
 
 Source: https://github.com/resources/articles/software-development-with-retrieval-augmentation-generation-rag
