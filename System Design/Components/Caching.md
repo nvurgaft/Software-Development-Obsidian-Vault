@@ -2,22 +2,23 @@ Use specialized data structures as a caching layer between you application logic
 Cache mechanisms map keys to stored values for storage and retrieval. 
 
 #### Workflow
-1. Try to access a stored value for a specific key
+1. Try to access a stored value mapped to a specific key
 2. Instead of reaching straight to the database, query the cache
 3. If there's a cache hit, retrieve the value from the cache.
 4. If there's a cache miss, ask the database for a value, return the value to the end user, take the value and cache it for future requests.
+5. Eventually the value will have to be invalidated or removed, an eviction policy will determine how it will be done.
 
 Caches are usually implemented using hash maps for $O(1)$ read and write complexity. Using other data structures to keep consistency and implement eviction policies.
 
 **Pros**
-* Reduce database hits, resulting in less throughput on the service.
-* Faster retrieval of data, has your value stored in memory instead of reading stored data in disk.
+* Reduce database hits, resulting in less throughput on the database.
+* Faster retrieval of data, has your value stored in memory instead of reading data from disk.
 * Allows up to specify capacity and eviction policies.
 
 **Cons**
 * Additional layer of complexity.
 * Additional cost of memory usage.
-* Additional cost of synchronizing duplicate data.
+* Additional cost of having to synchronize the data.
 * Can we afford end users receiving stale data ?
 * How do we invalidate the data ? We let the cache or the database decide ?
 

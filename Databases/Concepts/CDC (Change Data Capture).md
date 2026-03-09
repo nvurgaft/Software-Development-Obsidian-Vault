@@ -1,4 +1,4 @@
-Change Data Capture is about identifying can capturing data changes made inside a database using operations such as `INSERT`, `UPDATE` or `DELETE` and delivering those changes downstream as events in real time, Usually to a message broker.
+Change Data Capture is about identifying and capturing data changes made inside a database using operations such as `INSERT`, `UPDATE` or `DELETE` and delivering those changes downstream as events in real time, Usually to a message broker.
 
 #### Use cases:
 
