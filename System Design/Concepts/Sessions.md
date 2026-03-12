@@ -1,0 +1,1 @@
+A session is a sequence of interactions between a client (like a web browser) and a server. It allows the server to remember information about the client across multiple requests and interactions.

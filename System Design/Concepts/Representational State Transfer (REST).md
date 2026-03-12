@@ -1,4 +1,4 @@
-Representational State Transfer (REST) is an architectural style for designing networked applications, primarily used for web services. It emphasizes stateless communication between clients and servers, where each request from a client contains all the information needed to process it, and resources are identified by unique URIs.
+Representational State Transfer (REST) is an architectural style for designing networked applications, primarily used for web services. It emphasizes [[Stateless protocol|stateless]] communication between clients and servers, where each request from a client contains all the information needed to process it, and resources are identified by unique URIs.
 
 A REST API is an Application Programming Interface that adheres to the specifications and constraints of REST.
 
@@ -12,7 +12,7 @@ In REST API design, client and server applications must be completely independe
 
 ### Statelessness
 
-REST APIs are [[Stateless protocol|stateless]], meaning that each request needs to include all the information necessary for processing it. In other words, REST APIs do not require any server-side sessions. Server applications aren’t allowed to store any data related to a client request.
+REST APIs are stateless, meaning that each request needs to include all the information necessary for processing it. In other words, REST APIs do not require any server-side sessions. Server applications aren’t allowed to store any data related to a client request.
 
 ### Cacheability
 
