@@ -1,0 +1,1 @@
+A default gateway is a device, usually a router, that connects a local network to other networks, such as the Internet. It serves as the forwarding host for data packets when there are no specific routes defined for their destination.
