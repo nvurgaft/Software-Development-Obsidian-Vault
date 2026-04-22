@@ -49,3 +49,25 @@ public class DeadlockExample {
         t2.start();
     }
 }
+```
+
+You can avoid some Deadlocks by using conditional locking, usually when a lock is set, the lock will block a thread from executing until the other thread releases the lock.
+
+Java provides us with the [Lock](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html) interface and implementations.
+Using `tryLock` we can do something else instead of locking.
+Using `tryLock(n, TimeUnit)` we can try to lock and
+
+1. Either wait up to `n` time units for the lock and return true.
+2. Timeout and return false.
+
+```java
+if (lock.tryLock(2, TimeUnit.SECONDS)) {  
+	try {  
+		// critical section  
+	} finally {  
+		lock.unlock();  
+	}  
+} else {  
+	// handle potential deadlock  
+}
+```
