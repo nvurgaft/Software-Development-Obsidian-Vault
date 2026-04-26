@@ -5,10 +5,55 @@
 
 **Single Responsibility Principle (SRP)** - A class should have only one reason to change, meaning it should only have one responsibility.
 
+Example:
+
+```java
+/**
+	This class only does one thing and can be used by outside objects
+*/
+class CoinFlipper {
+	public Result flipCoin() {
+		...
+	}
+}
+```
+
 **Open-Closed Principle (OCP)** - Software entities should be open for extension but closed for modification.
+
+Example:
+
+```java
+final class LegacyClient {
+	// an old, yet working code that shouldn't be modified
+	// final is optional, but a final also can not be extended. 
+}
+
+class NewClient {
+	private LegacyClient legacyClient;
+	// this class acts as an adapter to the old legacy client class
+	// and provides additional modern features of it's own
+}
+```
+
 
 **Liskov Substitution Principle (LSP)** - Objects of a superclass should be replaceable with objects of a subclass without affecting the program's correctness.
 
+
+
 **Interface Segregation Principle (ISP)** - Clients should not be forced to depend on interfaces they do not use.
+
+Example:
+
+```java
+public interface HttpClient { ... }
+public interface SftpClient { ... }
+
+public class ElasticClient implements 
+	HttpClient,
+	SftpClient // <- remove this as Elastic is HTTP only
+	{ 
+	...
+}
+```
 
 **Dependency Inversion Principle (DIP)** - High-level modules should not depend on low-level modules; both should depend on abstractions.
