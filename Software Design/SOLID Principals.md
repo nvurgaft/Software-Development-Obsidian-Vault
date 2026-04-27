@@ -38,6 +38,12 @@ class NewClient {
 
 **Liskov Substitution Principle (LSP)** - Objects of a superclass should be replaceable with objects of a subclass without affecting the program's correctness.
 
+Example:
+
+```java
+AbstractClass aco = new ConcreteClassOne();
+AbstractClass act = new ConcreteClassTwo();
+```
 
 
 **Interface Segregation Principle (ISP)** - Clients should not be forced to depend on interfaces they do not use.
@@ -57,3 +63,46 @@ public class ElasticClient implements
 ```
 
 **Dependency Inversion Principle (DIP)** - High-level modules should not depend on low-level modules; both should depend on abstractions.
+This is to reduce tight coupling between classes.
+
+Instead of injecting a concrete implementation ...
+
+```java
+class ClassB { 
+// fields, constructor and methods 
+} 
+
+class ClassA { 
+	
+	private ClassB objectB; 
+	
+	public ClassA(ClassB objectB) { 
+		this.objectB = objectB; 
+	} 
+	// invoke objectB methods 
+}
+```
+
+Inject the interface
+
+```java
+class ClassB { 
+	// fields, constructor and methods 
+} 
+
+class InterfaceB { 
+	// fields, constructor and methods 
+} 
+
+class ClassA { 
+	
+	private ClassB objectB; 
+	
+	public ClassA(InterfaceB objectB) { 
+		this.objectB = objectB; 
+	} 
+	// invoke objectB methods 
+}
+```
+
+Now you can provide any implementation of `InterfaceB` at runtime.
