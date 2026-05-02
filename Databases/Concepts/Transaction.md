@@ -8,6 +8,10 @@ Common uses for Transactions are
 * E-Commerce sites
 * [[OLTP (Online Transaction processing)]] systems
 
+Transactions are a common tool in database design.
+
+Under some conditions, transaction may cause [[Transaction Deadlocks|deadlocks]] when they are executed at the same time.
+
 In SQL systems, you start a transaction using `BEGIN TRASACTION` or `BEGIN`, do your work and then either `COMMIT` or `ROLLBACK` your work.
 
 Savepoints allow to to take a snapshot of your work up to a certain point, and when a `ROLLBACK` occurs, your work will roll back to the last savepoint.

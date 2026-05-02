@@ -34,12 +34,12 @@ This is **REALLY BAD** because
 
 ### How to solve this ?
 
-Use Joins
+Use Joins to get all the data you need 
 
 ```postgresql
-select u.*, p.*
+select u.id, p.*
 from Users as u join Posts as p on u.id = p.userId
-while u.id = 1 or u.id = 2 or ..... or u.id = N
+where u.id = 1 or u.id = 2 or ..... or u.id = N
 ```
 
 JPA and Hibernate ORM have a built in feature to handle N+1 called `JOIN FETCH`
@@ -49,7 +49,7 @@ JPA and Hibernate ORM have a built in feature to handle N+1 called `JOIN FETCH`
 List<User> findAllWithPosts();
 ```
 
-Also in JPA and Hibernate you can set the fetch mode to EAGER to get the data beforehand, which will eliminate the need to run the N queries on the cost that the data will be fetched early, even if not needed.
+Also in JPA and Hibernate you can set the fetch mode to `EAGER` to get the data beforehand, which will eliminate the need to run the N queries on the cost that the data will be fetched early, even if not needed.
 
 ```java
 @OneToMany(fetch = FetchType.EAGER)
@@ -59,4 +59,4 @@ private List<Post> posts;
 Other Solutions
 
 1. Batching operations will reduce the total amount of queries.
-2. Redesign your API and Client code to request the additional queries on demand (don't just show all user posts on the same page, give the user a link to a separate page with the his posts, the client will specifically request the server to get these Posts).
+2. Redesign your API and Client code to run the additional queries on demand (don't just show all user posts on the same page, give the user a link to a separate page with his posts, the client will specifically request the page from the server to get these Posts).

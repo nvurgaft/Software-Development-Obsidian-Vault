@@ -9,7 +9,7 @@ Fields such as
 * `updated_at`
 * `updated_by`
 
-We can also create tables that keep an audit log. For example if we have a Students table, we may also create a `Students_Audit` table.
+We can also create tables that keeps an audit log. For example if we have a Students table, we may also create a `Students_Audit` table.
 
 In an audit table we will store copies of the modified data with information on who modified the data and when. A copy of the data before and after can also be saved. Note that this will take a lot of space and this process can be migrated to a different database using [[CDC (Change Data Capture)]].
 
