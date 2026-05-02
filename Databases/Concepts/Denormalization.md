@@ -23,4 +23,5 @@ Example:
 | 2              | 451         | John  | 555-5233 |
 | 3              | 123         | Frank | 555-1234 |
 
-The benefits to denormalized data is that look ups do not require complex joins. This approach is somewhat useful in distributed database cluster that can hold data in different shards and joining that data could be an expensive operation.
+The benefits to denormalized data is that look ups do not require complex joins. This approach is somewhat useful in distributed database clusters that can hold data in different shards and joining that data could be an expensive operation.
+This approach is also useful and common in noSQL databases where joins are not available but the data can easily be denormalized and aggregated by demand (such as in Analytics services).
