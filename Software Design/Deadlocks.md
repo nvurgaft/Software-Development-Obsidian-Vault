@@ -1,5 +1,6 @@
-A deadlock is a situation when 2 or more threads hold a lock and wait for each other to to finish a unit of work release theirs. Each thread is waiting for the other and this results in endless wait.
+A deadlock is a situation when 2 or more threads hold a lock and wait for each other to to finish a unit of work so they could release their own lock. When each thread forever waits for the other to finish, this results in a deadlock.
 
+Deadlocks also exists in database environments in the form of [[Transaction Deadlocks]].
 
 ```java
 import java.util.concurrent.locks.Lock;

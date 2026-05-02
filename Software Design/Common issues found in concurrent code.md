@@ -8,7 +8,7 @@ Incrementing a counter without a lock or atomic operation.
 2 threads read the same numeric value at the same time, increment the value and set it. What is happening is by the end of the 2 operations, the value has only increased by 1. 
 
 #### Deadlocks  
-[[Deadlocks]] occur when two threads each hold a lock and wait for the other to release theirs. Neither can proceed, so the system freezes. This often happens when locks are acquired in different orders across the codebase.
+[[Deadlocks]] occur when two threads each hold a [[Lock]] and wait for the other to release theirs. Neither can proceed, so the system freezes. This often happens when locks are acquired in different orders across the codebase.
 
 #### Live locks  
 Threads aren’t blocked, but they keep reacting to each other and retrying without making progress. CPU is active, but useful work never completes.
