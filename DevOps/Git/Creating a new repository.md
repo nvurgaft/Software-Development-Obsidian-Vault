@@ -4,7 +4,7 @@ To initialize a new local git repository simple run the following command on you
 git init
 ```
 
-If successful, a `.git` directory will appear.
+If successful, a `.git` sub-directory will be created.
 
 To copy and existing remove repository to the current directory run
 
@@ -16,7 +16,7 @@ A `.git` directory will appear if one didn't already exist.
 
 ### .gitignore
 
-A common best practice is to have a `.gitignore` file inside your main project directory, this file contains every file and directory that should be be managed by git. These resources will not be monitored be git, they will not be added to the repository, nor committed, and will not be uploaded to the remote in case of a push.
+A common best practice is to have a `.gitignore` file inside your main project directory, this file contains entries for files and directories that should be be ignored by git. These resources will not be monitored be git, they will not be added to the repository, nor committed, and will not be uploaded to the remote in case of a push.
 
 Always have this file
 
