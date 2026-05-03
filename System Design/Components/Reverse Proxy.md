@@ -1,6 +1,6 @@
 A reverse proxy is a server that sites in front of backend servers or services and forwards [[Client]] requests to them on behalf of the application.
 
-> [!NOTE]
+> [!Mental Note]
 > The Reverse Proxy sits on the server's end.
 
 Clients think they’re talking directly to your application, but they’re actually talking to the reverse proxy.

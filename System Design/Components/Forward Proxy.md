@@ -1,6 +1,6 @@
 A forward proxy acts as an intermediary between client devices and the internet. It receives requests from clients, evaluates them, and forwards them to the appropriate web servers. This process helps in managing and securing outbound traffic.
 
-> [!NOTE]
+> [!Mental Note]
 > The Forward Proxy sits on the client's end.
 
 ### How Forward Proxy Works
