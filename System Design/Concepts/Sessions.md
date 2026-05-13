@@ -34,5 +34,5 @@ When a session dies, invalidate and remove the session data from the cache.
 
 ### Token
 
-Another approach is tokens (JWT), store all session data in a token that is shared between the client and server.
+Another approach is using tokens ([[JSON Web Tokens (JWT)]]). Store all session data in a token that is shared between the client and server.
 Servers don't need to synchronize the session data between them because it is shared with the client and the client sends the token on every request.
