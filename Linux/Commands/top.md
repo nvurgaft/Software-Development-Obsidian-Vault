@@ -1,4 +1,4 @@
-The `top` command displays a list of Linux processes (Tree of Processes)
+The `top` command displays a list of Linux [[Process|processes]] (Tree of Processes)
 
 Usage
 
@@ -6,7 +6,7 @@ Usage
 top
 ```
 
-Will print an updating list of living processes with relevant information such as pid, memory usage and more.
+Will print an updating list of living processes with relevant information such as process ID, memory usage and more.
 To quit click `q`.
 
 A popular user-land alternative to `top` is `htop`. `htop` provides and interactive UI and many more features
