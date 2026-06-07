@@ -65,12 +65,11 @@ result = a + b;
 This removed the need to create an unnecessary stack frame
 
 - **Dead code elimination**  
-    Removes code that can never affect the result.
+    Removes code that can never runs or affects the result.
 - **Loop optimization**  
     Improves performance of frequently executed loops.
 - **Escape analysis**  
     Determines whether an object can remain on the heap or be garbage collected.
-
 ### Tiered Compilation
 
 Modern JVMs use **tiered compilation**:
