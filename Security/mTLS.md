@@ -1,0 +1,2 @@
+Mutual TLS (mTLS) enhances security by requiring both client and server to authenticate each other with certificates, unlike standard TLS which only verifies servers. 
+mTLS is critical for microservices and [[Zero Trust|zero-trust]] architectures, mTLS prevents [[Man-in-the-Middle Attack (MITM)|Man in the middle attacks]], eliminates [[Credential Theft and Replay|credential theft risks]], and ensures bidirectional identity verification, though it adds complexity requiring automated certificate management and tools like service meshes to simplify deployment.

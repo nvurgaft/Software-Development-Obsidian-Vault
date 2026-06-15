@@ -1,0 +1,1 @@
+Traditional authentication methods often rely on bearer tokens (API keys, [[JSON Web Tokens (JWT)|JWTs]], etc.). If these tokens are leaked, an attacker can replay them to gain unauthorized access. Because these tokens are often long-lived, they can be used for an extended period, allowing bad actors to cause significant damage.

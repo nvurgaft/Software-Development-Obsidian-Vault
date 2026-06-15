@@ -1,0 +1,1 @@
+In a Man-in-the-Middle (MITM) attack, an attacker intercepts the communication between a client and a server, posing as both to eavesdrop on or manipulate the data being exchanged. The client believes it's communicating with the legitimate server, and the server believes it's communicating with the legitimate client, but in reality, all traffic is flowing through the attacker.
