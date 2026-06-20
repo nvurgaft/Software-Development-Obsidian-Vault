@@ -1,9 +1,8 @@
-MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems. Using MCP, AI applications like Claude or ChatGPT can connect to data sources (e.g. local files, databases), tools (e.g. search engines, calculators) and workflows (e.g. specialized prompts)—enabling them to access key information and perform tasks.
+The Model Context Protocol (MCP) is an open standard developed by Anthropic. It aims to standardize the integration of AI systems, particularly large language models (LLMs), with external tools, data sources, systems and AI model providers.
 
 ## What can MCP enable?
 
-- Agents can access your Google Calendar and Notion, acting as a more personalized AI assistant.
-- Claude Code can generate an entire web app using a Figma design.
+- Agents can access your Google Calendar using an MCP implemented by Google, acting as a more personalized AI assistant.
 - Enterprise chatbots can connect to multiple databases across an organization, empowering users to analyze data using chat.
 - AI models can create 3D designs on Blender and print them out using a 3D printer.
 
@@ -11,7 +10,7 @@ MCP (Model Context Protocol) is an open-source standard for connecting AI applic
 
 Depending on where you sit in the ecosystem, MCP can have a range of benefits.
 
-- **Developers**: MCP reduces development time and complexity when building, or integrating with, an AI application or agent.
+- **Developers**: MCP reduces development time and complexity by removing the need to write wrapper for external systems, the 3rd party implements an MCP and the developer integrates to it.
 - **AI applications or agents**: MCP provides access to an ecosystem of data sources, tools and apps which will enhance capabilities and improve the end-user experience.
 - **End-users**: MCP results in more capable AI applications or agents which can access your data and take actions on your behalf when necessary.
 
@@ -31,10 +30,12 @@ During the data collection phase, the model is exposed to large volumes of textu
 
 Lastly, during the fine-tuning phase, the model is further trained on a smaller, more task-specific dataset. This process refines the model's knowledge and enhances its performance for specific tasks, such as sentiment analysis or translation, so that it can be used for a variety of applications.  
 
-### Key components
+### Components of MCP
 
-The transformer model breaks raw text down into smaller, basic units of text called tokens. Tokens may consist of words, parts of words, or even individual characters, depending on the use case. These tokens are then converted into dense numerical representations that capture order, semantic meaning, and context. These representations, called embeddings, are then passed through a stack of layers consisting of two sub-layers: self-attention and neural networks.
-
-While both layers assist in converting text into a form that the model can process effectively, the self-attention mechanism is a key component to the transformer architecture. The self-attention mechanism is what permits the model to home in on different parts of a text sequence and dynamically weigh the value of information relative to other tokens in the sequence, regardless of their position. This mechanism is also what gives LLMs the capacity to capture the intricate dependencies, relationships, and contextual nuances of written language.
+|Component|Description|
+|---|---|
+|MCP Client|Resides within the AI application, facilitating communication with MCP servers.|
+|MCP Server|External service that provides data or capabilities to the LLM.|
+|Transport Layer|Utilizes JSON-RPC 2.0 for communication, supporting both local and remote resources.|
 
 Source: https://modelcontextprotocol.io/docs/getting-started/intro
