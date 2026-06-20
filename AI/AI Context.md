@@ -29,3 +29,4 @@ A context window is the amount of information an AI model can remember while gen
 
 - **Size**: Context windows are measured in tokens, which can represent characters, parts of words, or phrases. Larger context windows allow for more information to be processed.
 - **Impact**: A larger context window enhances the model's ability to handle complex tasks and maintain longer conversations. However, it can also lead to issues like "context rot," where the model struggles to recall details from earlier in the conversation.
+
