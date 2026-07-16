@@ -1,4 +1,4 @@
-JWT (JSON Web Token) is a compact way to represent user identity and claims between systems, commonly used for authentication in APIs and web apps.
+JWT (JSON Web Token) is a compact way to represent user identity and claims between systems, commonly used for authentication between APIs and web apps.
 ## Structure of a JWT
 
 A JWT has 3 parts separated by dots:
@@ -46,10 +46,10 @@ The data can be anything, but some claims are necessary for session maintenance 
 
 Some common claims are
 
-- `username` → subject/user ID
-- `exp` → expiration time
-- `iat` → issued at
-- `role` → custom application claim
+- `username` or `sub` → subject/user ID
+- `exp` → token expiration time (in millis)
+- `iat` → issued at (in millis)
+- `role` → custom application claim (e.g. user roles )
 
 Important:  
 The payload is **Base64 encoded, not encrypted**. Anyone can read it.
@@ -96,7 +96,7 @@ Do not store authentication data because the token payload can be easily examine
 
 ### Use HTTPS
 
-The token is only hashed and signed, the stored data is not encrypted. Use an encrypted carrier such as SSL/TLS over HTTPS, tokens can easily intercepted and read by a man in the middle. 
+The token is only hashed and signed, the stored data is not encrypted. Hashing is used to detect tampering. Use an encrypted carrier such as SSL/TLS over HTTPS, tokens can be easily intercepted and read by a [[Man-in-the-Middle Attack (MITM)|man in the middle]]. 
 
 ### Keep expiration short
 
@@ -117,7 +117,7 @@ Client sends credentials:
 POST /login
 ```
 
-Server validates username/password.
+Server validates username/password (usually in a filter/interceptor/middleware).
 ## Step 2 — Server creates JWT
 
 Server generates token:
@@ -126,7 +126,8 @@ Server generates token:
 {
   "sub": "42",
   "role": "USER",
-  "exp": ...
+  "exp": 12345678,
+  "iat": 23456789,
 }
 ```
 
@@ -170,9 +171,9 @@ JWT acts as an alternative to common server side [[Sessions]]. Username and pass
 ## Stateless authentication
 
 Server does not store sessions. All the necessary session data is stored inside the token and is passed between the server and client.
+If you are migrating into JWT, make sure to also disable any session mechanisms. 
 
 This scales well in distributed systems/microservices (e.g. [[Sessions#Sticky Sessions|Sticky Sessions]]).
-
 # Refresh Token
 
 A JWT refresh token is a long-lived token used to obtain a new access token when the current one expires (as denoted by the `exp` claim). This allows users to stay logged in without needing to re-enter their credentials and re-authenticate frequently.
@@ -187,16 +188,16 @@ Are long-lived and used to obtain new access tokens
 
 ### Token Lifecycle
 
-1. Login: When a user logs in, the server issues both an access token and a refresh token.
-2. Access Token Usage: The access token is used to access protected resources. It typically has a short lifespan (e.g., minutes to hours).
-3. Token Expiration: Once the access token expires, the user must use the refresh token to obtain a new access token.
-4. Refreshing the Token: The client sends the refresh token to the server, which verifies it and issues a new access token (and possibly a new refresh token).
+1. Login: When a user logs in, the server issues both an **access token** and a **refresh token**.
+2. Access Token Usage: The access token is used by the client to access protected resources. It typically has a short lifespan (e.g., minutes to hours).
+3. Token Expiration: Once the access token expires, the user must use the refresh token to obtain a new access token. 
+4. Refreshing the Token: The client sends a "refresh" request with his current token, this token is verified against the refresh token at the server, and a new access token is produced and given to the client.
 
 ### Security Features
 
 - Short-lived Access Tokens: Access tokens expire quickly to minimize the risk of unauthorized access.
 - Long-lived Refresh Tokens: Refresh tokens last longer, allowing users to maintain their sessions without frequent logins.
-- Secure Storage: Refresh tokens should be stored securely, often in HTTP-only cookies, to prevent unauthorized access.
+- Secure Storage: Refresh tokens should be stored securely, often in HttpOnly cookies (over SSL) or Databases, to prevent unauthorized access.
 
 ## Benefits of Using Refresh Tokens
 
