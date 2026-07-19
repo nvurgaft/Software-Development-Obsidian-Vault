@@ -31,3 +31,17 @@ Run a command without starting the Linux default shell
 ```shell
 wsl --exec "command"
 ```
+
+To log in using an existing system user run the `wsl` with the `-u` (or `--user`) argument, e.g. to start with the `www-data` user 
+
+```sh
+wsl -u www-data
+```
+
+To login using root
+
+```sh
+wsl -u root
+```
+
+By default wsl required you to create a regular user and using `su` to change into user will not be possible because no root password was set on install. making this the only way to set one and login as root. 

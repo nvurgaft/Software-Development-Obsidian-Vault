@@ -1,14 +1,20 @@
 # Tail
 #linux 
 
-`tail` prints from the end a file
+`tail` prints the last n lines of a file
 
-Basic usage: `tail -n <number of lines> <path>`
+`tail` does the exact opposite of [[head|head]]
+
+Basic usage: ```
+```sh
+tail -n <number of lines> <path>
+```
 
 Example
 
-    tail -n 5 /path/to/file.txt
-	
+```sh
+tail -n 5 /path/to/file.txt
+```
 Parameters
 
 `-n` number of lines to print starting from the end of the file

@@ -15,5 +15,6 @@ An [[API Gateway]] can be considered a superset of a reverse proxy, a gateway wi
 4. **Rate Limiting** - Because all client requests pass trough the Gateway, it perfect central point to rate limit requests to the system and block suspicious traffic. Give less rate limitation to premium users. 
 5. **Load Balancing** - [[Load Balancer|Load Balancers]] traffic and requests among multiple running server instances.
 6. **Logging and Monitoring** - The gateway is a central place useful to gather user metrics, tracing and [[Auditing|auditing]].
+7. **Request and Response modification** - because traffic passed through a smart intermediary that can terminate the encryption, the requests can be modified, headers can be added or changed inside HTTP requests.
 
 Some popular Server software that can also act as reverse proxies are [nginx](https://nginx.org/en/) and the [Apache httpd server  ](https://httpd.apache.org/).
