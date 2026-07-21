@@ -1,0 +1,3 @@
+In Windows NT operating systems, a Windows service is a computer program that operates in the background. It is similar in concept to a Unix [[Daemon]] A Windows service must conform to the interface rules and protocols of the Service Control Manager, the component responsible for managing Windows services. It is the Services and Controller app, services.exe, that launches all the services and manages their actions, such as start, end, etc.
+
+https://en.wikipedia.org/wiki/Windows_service

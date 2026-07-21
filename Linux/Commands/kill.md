@@ -5,17 +5,24 @@ Sends a signal to a running process. Commonly used to terminate misbehaving proc
 
 Usage:
 
-    kill -<signum> <pid>
+```sh
+kill -<signum> <pid>
+```
 
 Requesting a program to stop running and giving it time to properly shut down
 
-    $ kill -15 <pid>
+```sh
+kill -15 <pid>
+```
 
 To force a program to terminate immediately (this is usually employed if the above approach fails)
 
-    $ kill -9 <pid>
-	
+```sh
+kill -9 <pid>
+```
+
 Print a signal's name 
+
 ```sh
 $ kill -l 9
 KILL
