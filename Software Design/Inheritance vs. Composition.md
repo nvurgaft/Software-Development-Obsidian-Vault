@@ -27,6 +27,5 @@ In the above example, the manager **has** employees working under him.
 - Inheritance encourages reuse through hierarchy; composition encourages reuse through collaboration.
 - Inheritance can become brittle in large systems; composition tends to scale better and supports modular design.
 
-
 **Rule of thumb:**  
 Prefer composition over inheritance unless there’s a clear, stable “is-a” relationship.

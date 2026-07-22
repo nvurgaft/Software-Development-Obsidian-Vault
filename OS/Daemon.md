@@ -9,7 +9,7 @@ Daemons run silently in the background, they provide services to other programs,
 
 Daemons are similar to [[service|services]] found in Windows systems.
 
-Some common Daemons in linux systems are
+Some common Daemons in Linux systems are
 
 `systemd` – the main purpose of this daemon is to unify service configuration and behavior across Linux distributions.
 

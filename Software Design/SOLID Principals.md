@@ -1,6 +1,12 @@
  SOLID is an acronym that represents five key design concepts in object-oriented programming that help making code more understandable, flexible, and maintainable. 
- They include the Single Responsibility Principle, Open-Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, and Dependency Inversion Principle.
-
+ They include:
+ 
+ 1. Single Responsibility Principle 
+ 2. Open-Closed Principle
+ 3. Liskov Substitution Principle
+ 4. Interface Segregation Principle 
+ 5. Dependency Inversion Principle.
+ 
 ## The Five SOLID Principles
 
 **Single Responsibility Principle (SRP)** - A class should have only one reason to change, meaning it should only have one responsibility.
@@ -25,16 +31,15 @@ Example:
 ```java
 final class LegacyClient {
 	// an old, yet working code that shouldn't be modified
-	// final is optional, but a final also can not be extended. 
+	// final is optional, but a final class can not be extended. 
 }
 
 class NewClient {
 	private LegacyClient legacyClient;
-	// this class acts as an adapter to the old legacy client class
+	// this class acts as an adapter/wrapper to the old legacy client class
 	// and provides additional modern features of it's own
 }
 ```
-
 
 **Liskov Substitution Principle (LSP)** - Objects of a superclass should be replaceable with objects of a subclass without affecting the program's correctness.
 

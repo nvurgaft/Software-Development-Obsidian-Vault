@@ -1,7 +1,5 @@
-Allows for geographically distributed content (caching), can reduce number of server hits if a client requests a resource from another geographical location .
+Allows for geographically distributed content, used as a caching mechanism that can reduce number of server hits if a client requests a resource from another geographical location.
 
-Local hosting of HTML, CSS, JavaScript, Images, videos, etc..
+Local hosting of static content such as HTML, CSS, JavaScript, Images, videos, etc..
 
-Some limited computation may be available as well
-
-Mainly useful for storing static content such as images or static web pages
+Some limited computation may be available as well. 
