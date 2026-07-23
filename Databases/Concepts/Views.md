@@ -5,7 +5,8 @@ Views are used as a store common, complex queries that can be queried from multi
 
 Simple view are views that reference only one table and can be called to have it's underlaying table modified.
 
-In PG, simple views fulfill the following conditions:
+In Postgresql, simple views fulfill the following conditions:
+
 - The view must have exactly one entry in its FROM list, which must be a table or another updatable view.
 - The view definition must not contain WITH, DISTINCT, GROUP BY, HAVING, LIMIT, or OFFSET clauses at the top level.
 - The view definition must not contain set operations (UNION, INTERSECT or EXCEPT) at the top level.
