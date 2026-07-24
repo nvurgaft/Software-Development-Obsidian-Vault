@@ -28,9 +28,9 @@ At the end of each sprint, the development team should have a deployable product
 
 This adds flexibility to the development cycle, instead of committing to create a set product in 6 months, ship the users new features every couple of weeks.
 
-Roles
+## Roles
 
-Scrum defined 3 roles 
+Scrum defined 3 main roles 
 
 ### Product Owner
 

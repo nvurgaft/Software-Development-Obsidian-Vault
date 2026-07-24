@@ -12,9 +12,13 @@ Message brokers offer two basic message distribution patterns or messaging style
 
 ### Role in Microservices
 
-Microservices must have a means of communicating with one another in order to operate in concert. Message brokers are one mechanism they use to create this shared communications backbone.
+Microservices must have a means of communicating with one another in order to operate in concert. Message brokers are one mechanism they use to communicate.
 
-Message brokers enable asynchronous communications between services so that the sending service need not wait for the receiving service’s reply. This improves fault tolerance and resiliency in the systems in which they’re employed. In addition, the use of message brokers makes it easier to scale systems since a pub/sub messaging pattern can readily support changing numbers of services. Message brokers also keep track of consumers’ states.
+Message brokers enable asynchronous (event driven) communications between services so that the sending service need not wait for the receiving service’s reply. This improves fault tolerance and resiliency in the system. 
+
+In addition, the use of message brokers makes it easier to scale systems since a pub/sub messaging pattern can readily support changing numbers of services (services don't need to know about each other, only send messages to a central location). 
+
+Message brokers can also keep track of consumers’ states.
 
 Source: https://www.ibm.com/think/topics/message-brokers
 

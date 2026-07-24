@@ -1,3 +1,3 @@
-A machine that belongs to the end user, can be a browser running on a personal computer, a automated host, a hosted service, a mobile device, anything that sends requests and expects a response to work with.
+A part of a service or application that sends requests to a server and waits for a response
 
-In software architecture, the client talks to the application backend using an consistent API such as SOAP or [[Representational State Transfer (REST)|REST]].
+In software architecture, the client talks to the application backend using an consistent API such as RPC, SOAP or [[Representational State Transfer (REST)|REST]].
