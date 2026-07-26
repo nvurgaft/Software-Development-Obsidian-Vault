@@ -1,0 +1,1 @@
+A bind mount maps an existing directory from your computer into the container.

@@ -14,16 +14,29 @@ Pull an image, in this example it's an Nginx image
 docker pull nginx
 ```
 
-Build an image from a Dockerfile
+Build an image from a [[Dockerfile]]
 
 ```sh
 docker buld -t myapp .
 ```
 
+* `-t` tags the image
+* `.` tells the Dockerfile to look at the current directory
+
 Create and start a container
 
 ```sh
-docker run -d -p 8080:80 nginx
+docker run -d -p 8080:80 nginx/latest
+```
+
+- `-d` - run the container in detached mode (in the background)
+- `-p 8080:80` - map port 8080 of the host to port 80 in the container
+- `nginx/latest` - the image to use and the version (`latest` uses the latest version)
+
+This command can be shortened 
+
+```sh
+docker run -dp 8080:80 nginx/latest
 ```
 
 List running containers
