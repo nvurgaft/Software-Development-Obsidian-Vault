@@ -1,5 +1,7 @@
-A `Dockerfile` is simply a text-based script of instructions that is used to create a container image.
+A `Dockerfile` is simply a text-based script of instructions used to create a container images.
 A docker file contains build stages that run sequentially, some of these stages are cached to save startup time.
+A docker file only describes the image to be created, a `docker build` and a `docker run` commands will have to be executed to create and run the container. 
+Use [[Docker Compose]] as an alternative to running these shell commands.
 
 **Example:**
 

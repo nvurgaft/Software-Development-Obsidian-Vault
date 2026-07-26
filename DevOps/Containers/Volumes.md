@@ -5,7 +5,7 @@ This is an intentional behavior!
 
 To persist data between stopping or destroying and recreating a container, we use volumes.
 
-Volumes are similar to Bind Mounts
+Volumes share some similarities to [[Bind Mounts]] albeit used for different use cases 
 
 For our MySQL example, we will create a volume and map it to the data directory where the database stores it tabular data.
 
