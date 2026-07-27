@@ -1,6 +1,6 @@
 Docker is a popular, all in one container platform with a long-running daemon.
 
-#### Some common commands
+### Common commands
 
 Get current version
 
@@ -14,6 +14,8 @@ Pull an image, in this example it's an Nginx image
 docker pull nginx
 ```
 
+### Starting the container
+
 Build an image from a [[Dockerfile]]
 
 ```sh
@@ -21,9 +23,9 @@ docker buld -t myapp .
 ```
 
 * `-t` tags the image
-* `.` tells the Dockerfile to look at the current directory
+* `.` tells the `Dockerfile` to look at the current directory
 
-Create and start a container
+Spin up a container
 
 ```sh
 docker run -d -p 8080:80 nginx/latest
@@ -51,19 +53,33 @@ List container logs
 docker logs my-container
 ```
 
-Run a command inside a running container
+### Running commands
+
+Run a command inside a running container, for example
+
+```sh
+docker exec -it my-container uname -a
+```
+
+Will execute `uname -a` that will print the OS information
+
+To open an interactive shell, run
 
 ```sh
 docker exec -it my-container sh
 ```
 
-Stop a container
+or `bash` (whatever shell is installed on the container OS).
+
+### Stopping the container
+
+Stop a container using it's id or name
 
 ```sh
 docker stop my-container
 ```
 
-Remove a container
+Remove a container using it's id or name
 
 ```sh
 docker rm my-container
