@@ -18,7 +18,9 @@ OLTP systems process real time transactional data that have to be correct, consi
 ```sql
 INSERT INTO transaction_log VALUES (?, ?, ?);
 
-UPDATE trasaction_log SET status = 'DONE' WHERE status = 'PENDING' and user_id = ?;
+UPDATE trasaction_log 
+SET status = 'DONE' 
+WHERE status = 'PENDING' and user_id = ?;
 
 SELECT * 
 FROM trasaction_log 

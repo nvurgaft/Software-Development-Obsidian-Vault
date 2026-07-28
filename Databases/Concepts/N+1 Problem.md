@@ -5,7 +5,6 @@ The N+1 problem occurs when an application executes one query to fetch a list of
 Example:
 
 ```java
-
 // the .findAll will execute a SELECT
 List<User> users = usersRepository.findAll();
 // iterate through the users

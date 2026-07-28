@@ -50,5 +50,3 @@ This is a polling approach, the target tables may not even change during the tim
 
 Read data straight from the database transaction log, or the [Write-Ahead Log](https://www.postgresql.org/docs/current/wal.html).
 This approach removes the need to call functions that run additional queries but adds the complexity of having to parse database logs.
-
-
