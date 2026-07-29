@@ -12,15 +12,7 @@ In Postgresql, simple views fulfill the following conditions:
 - The view definition must not contain set operations (UNION, INTERSECT or EXCEPT) at the top level.
 - All columns in the view's select list must be simple references to columns of the underlying relation. They cannot be expressions, literals or functions. System columns cannot be referenced, either.
 - No column of the underlying relation can appear more than once in the view's select list.
-- The view must not have the security_barrier property.
-
-Example:
-
-```postgresql
-UPDATE pending_customers_view
-SET customer_state = 'DONE'
-WHEN customer_state = 'PENDING'
-```
+- The view must not have the `security_barrier` property.
 
 ### Updatable Views
 
@@ -36,9 +28,10 @@ Updatable Views can then be further modified using [[Triggers]].
 Syntax:
 
 ```sql
-CREATE VIEW view_name AS ...query...
+CREATE VIEW view_name AS query
 ```
 
+Or replace if exists
 ```sql
 CREATE OR REPLACE VIEW view_name AS query
 ```
@@ -58,6 +51,17 @@ Then query from it:
 SELECT * FROM blocked_users;
 ```
 
+Use an `UPDATE` query to update an existing view:
+```postgresql
+UPDATE pending_customers_view
+SET customer_state = 'DONE'
+WHEN customer_state = 'PENDING'
+```
+
+To drop a view
+```postgresql
+DROP VIEW [IF EXISTS] view_name;
+```
 ### Common use cases for Views
 
 #### API & Abstraction Layer

@@ -50,6 +50,8 @@ AbstractClass aco = new ConcreteClassOne();
 AbstractClass act = new ConcreteClassTwo();
 ```
 
+The correct application of `ConcreteClassOne` shouldn't need to depend on calling methods not specified by `AbstractClass`. The `AbstractClass` is a contract.
+
 
 **Interface Segregation Principle (ISP)** - Clients should not be forced to depend on interfaces they do not use.
 

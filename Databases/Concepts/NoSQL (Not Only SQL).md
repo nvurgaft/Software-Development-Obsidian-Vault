@@ -22,3 +22,14 @@ It doesn't do ACID and joins !
 It doesn't do transactions !
 
 In Elastic the data is not relational, the schema is made up of indices that contain loosely structured documents.
+
+### Redis
+
+Redis is a very fast key value store that can run on disk and in-memory.
+Redis doesn't do complex schemas, tables with relations, joins or transactions.
+What it's really good for is quick reads/writes, lookups and horizontal scaling for load and availability. It's a fast alternative to regular SQL for many use cases such as
+
+* [[Sessions|Session]] stores
+* Service facing cache 
+* Temporary global state (e.g. Shopping carts)
+* Counters (leaderboards, rate limiting, etc..)
