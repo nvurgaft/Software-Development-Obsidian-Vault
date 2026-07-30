@@ -26,7 +26,6 @@ SELECT *
 FROM trasaction_log 
 WHERE customer_id = ?;
 ```
-
 #### OLTP emphasizes:
 
 * Correctness under concurrency.

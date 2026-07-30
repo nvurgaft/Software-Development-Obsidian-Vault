@@ -1,3 +1,4 @@
-Threads belong to and exist inside [[Process|processes]], unlike processes threads can access variables belonging to other threads.
+Threads in operating systems are the smallest unit of execution within a [[Process]], allowing multiple tasks to run concurrently and share resources like memory. This enables more efficient use of CPU resources and improves application responsiveness.
+### In Java
 
-Multiple threads inside a process share the same heap, but each thread has it's own registers and stack.
+A Java thread is a lightweight unit of execution inside a program, and the JVM can run multiple threads at the same time. You can create threads either by extending the Thread class and overriding `run()`, or by implementing the Runnable interface and passing it to a

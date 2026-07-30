@@ -1,6 +1,6 @@
 Is a process or a technology that allows users to store big amounts of data from multiple data sources and quickly analyze and retrieve this data using [multi-dimensional analytical (MDA)](https://en.wikipedia.org/wiki/Multidimensional_analysis) queries.
 
-You do not do OLAP in the services and applications facing the end-user as it will overkill the processing unit with heavy queries and big data.
+Do not do OLAP in the services and applications facing the end-user as it will overkill the processing unit with heavy queries and big data.
 Instead Use [[ETL (Extract, Transform, Load)]]/[[ELT (Extract, Load, Transform)]] from an [[OLTP (Online Transaction processing)]] service to transfer the data into an OLAP service.
 
 #### Common uses for OLAP systems are:
@@ -23,6 +23,7 @@ SELECT customer_id, count(*)
 FROM purcheses
 GROUP BY customer_id
 HAVING total_price >= 100
+ORDER BY date_created DESC, customer_name ASC;
 ```
 
 #### OLAP emphasizes:
