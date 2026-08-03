@@ -8,7 +8,7 @@ ip addr
 ```
 
 It will return an easily parseable list of interfaces
-```
+```shell
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -25,13 +25,13 @@ It will return an easily parseable list of interfaces
 
 To query a specific interface by name, add the `show` command with the interface name
 
-```
+```shell
 ip addr show eth0
 ```
 
 Will print 
 
-```
+```shell
 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether 00:15:5d:dc:90:f2 brd ff:ff:ff:ff:ff:ff
     inet 172.27.226.6/20 brd 172.27.239.255 scope global eth0

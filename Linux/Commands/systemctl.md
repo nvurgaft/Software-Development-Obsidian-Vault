@@ -17,7 +17,7 @@ You can start a service
 systemctl start nginx
 ```
 
-Stop it
+Stop a service
 
 ```sh
 systemctl stop nginx
