@@ -1,5 +1,4 @@
 Skills are an [open standard](https://agentskills.io/home) for extending agent capabilities. A skill is a folder containing a `SKILL.md` file with instructions that the agent can follow when working on specific tasks.
-
 ### What are skills?
 
 Skills are reusable packages of knowledge that extend what the agent can do. Each skill contains:
