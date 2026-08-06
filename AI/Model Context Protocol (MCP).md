@@ -1,8 +1,8 @@
-The Model Context Protocol (MCP) is an open standard developed by Anthropic. It aims to standardize the integration of AI systems, particularly large language models (LLMs), with external tools, data sources, systems and AI model providers.
+The Model Context Protocol (MCP) is an open standard developed by Anthropic. It aims to standardize the integration of AI systems, particularly [[Large Language Model (LLM)|large language models]] (LLMs), with external tools, data sources, systems and AI model providers.
 
 ## What can MCP enable?
 
-- Agents can access your Google Calendar using an MCP implemented by Google, acting as a more personalized AI assistant.
+- [[AI Agent|Agents]] can access your Google Calendar using an MCP implemented by Google, acting as a more personalized AI assistant.
 - Enterprise chatbots can connect to multiple databases across an organization, empowering users to analyze data using chat.
 - AI models can create 3D designs on Blender and print them out using a 3D printer.
 

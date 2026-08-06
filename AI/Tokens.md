@@ -2,7 +2,7 @@ AI tokens are the basic units of text that a large language model reads and prod
 
 ### Understanding AI Tokens
 
-AI tokens are the fundamental units of text that large language models (LLMs) use to process and generate language. They are created by breaking down sentences into smaller fragments, allowing the model to analyze and understand the input more effectively.
+AI tokens are the fundamental units of text that [[Large Language Model (LLM)|large language models]] (LLMs) use to process and generate language. They are created by breaking down sentences into smaller fragments, allowing the model to analyze and understand the input more effectively.
 
 #### What Are AI Tokens?
 

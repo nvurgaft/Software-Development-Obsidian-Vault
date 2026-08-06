@@ -4,6 +4,7 @@ Here's a list of common workflows and patterns used when coding with AI models.
 
 Provide the AI model with high-level requirement and it will turn them into an implementation plan.
 An Implementation Plan is a document that covers all the steps, considerations and features the model proposes to implement.
+This is a procedural approach, we repeat similar steps until we reach our goal.
 
 Example:
 
