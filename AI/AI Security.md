@@ -76,6 +76,12 @@ AI models take considerable resources to run, a [[Denial Of Service Attack]] can
 
 Another abuse vectors are manipulating the model to consume a large amount of [[Tokens]], GPU, [[AI Context]] windows and tool calls.
 
+> [!In short]
+> Add layers of defense between the user and your model.
+> 
+> Do not let direct access to your models, have a service to act as a mediator. 
+
+
 Common defenses include:
 
 - API Rate limiting 
