@@ -40,7 +40,7 @@ A [[Zero Trust]] approach is probably the way to go.
 
 ### Data leakage
 
-Models tend to work and process a lot of data, some of this data can be very sensitive, things like passwords, tokens, environment variables should be separated from the model.
+Models tend to work and process a lot of data, some of this data can be very sensitive, objects such as passwords, access tokens, [[Keystore|keystores]] and other sensitive data should be separated from the model.
 If the model is on a cloud (SaaS) sensitive data can leak outside the organization and compromise it.
 
 ### RAG security
@@ -72,9 +72,9 @@ Either manually validate the generated code is ok or run it in a sandbox.
 
 ### AI specific denial of service
 
-AI models take considerable resources to run, a DoS attack can easily choke a system and bring a model down. Make sure you give it enough resources but do not allow it access to endless system resources. Configure an upper limit.
+AI models take considerable resources to run, a [[Denial Of Service Attack]] can easily choke a system and bring a model down. Make sure you give it enough resources but do not allow it access to endless system resources. Configure an upper limit.
 
-Another abuse vectors are manipulating the model to consume a large amount of tokens, GPU, [[AI Context]] windows and tool calls.
+Another abuse vectors are manipulating the model to consume a large amount of [[Tokens]], GPU, [[AI Context]] windows and tool calls.
 
 Common defenses include:
 

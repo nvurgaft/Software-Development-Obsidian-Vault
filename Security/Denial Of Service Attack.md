@@ -1,0 +1,1 @@
+A denial-of-service (DoS) attack is a malicious attempt to disrupt the normal functioning of a targeted computer, network, or service. The primary goal is to make the resource unavailable to its intended users by overwhelming it with excessive requests or exploiting vulnerabilities.
