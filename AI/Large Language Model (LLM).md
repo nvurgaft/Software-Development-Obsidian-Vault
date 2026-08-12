@@ -1,4 +1,12 @@
-Large language models (LLMs) are advanced AI systems that understand and generate natural language, or human-like text, using the data they’ve been trained on through [machine learning](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-machine-learning-platform/) techniques. LLMs can automatically generate text-based content, which can be applied to a myriad of uses cases across industries, resulting in greater efficiencies and cost savings for organizations worldwide.
+Large language models (LLMs) are advanced AI systems that understand and generate natural language, or human-like text, using the data they’ve been trained on through [machine learning](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-machine-learning-platform/) techniques. 
+LLMs can automatically generate text-based content, which can be applied to a myriad of uses cases across industries, resulting in greater efficiencies and cost savings for organizations worldwide.
+
+LLMs can be conversed and reasoned with, they can be requested to gather and process information for the end user. Because of this, multiple [[Workflows]] were developed to work with AI and LLMs.
+LLMs can also be configured using natural language to provide more narrow and on point data to users.
+Because the LLM output is cleartext, users can request file generation and code generation from LLMs.
+
+
+Popular LLMs are ChatGPT, Claude, Gemini, etc..
 
 ### Key takeaways
 

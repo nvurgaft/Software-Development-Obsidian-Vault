@@ -80,7 +80,7 @@ AI can also participate in infrastructure workflows.
 
 You can ask AI to:
 
-- Generate [[Dockerfile|Dockerfiles]]
+- Generate [[Dockerfile|Dockerfiles]], docker compose files, `.gitignore`, etc..
 - Generate Kubernetes manifests
 - Explain Kubernetes errors
 - Write CI/CD pipelines
