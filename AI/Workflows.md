@@ -1,5 +1,7 @@
 Here's a list of common workflows and patterns used when coding with AI models.
 
+When allowing a Model to execute tools and commands on the host machine, it is crucial to also follow standard [[AI Security]] processes.
+
 ### Description/Specifications 
 
 Provide the AI model with high-level requirement and it will turn them into an implementation plan.
@@ -74,7 +76,7 @@ Additional use cases
 4. Refactoring existing code
 5. Investigate bugs and negative issues
 
-### Devops
+### DevOps
 
 AI can also participate in infrastructure workflows.
 

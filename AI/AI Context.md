@@ -1,4 +1,4 @@
-A context window in AI refers to the amount of information or text that a model can remember and use while generating responses, similar to a human's short-term memory. Larger context windows allow AI models to handle more complex tasks and provide more accurate and nuanced answers
+A context window in AI refers to the amount of information or text that a [[Large Language Model (LLM)|model]] can remember and use while generating responses, similar to a human's short-term memory. Larger context windows allow AI models to handle more complex tasks and provide more accurate and nuanced answers
 
 ## Understanding AI Context
 

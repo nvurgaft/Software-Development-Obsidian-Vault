@@ -24,6 +24,6 @@ AI tokens are the fundamental units of text that [[Large Language Model (LLM)|la
 
 Cost Implications: AI models often charge based on token usage. Input tokens (what you send) and output tokens (what the model generates) are typically billed separately, with output tokens costing more due to the computational effort involved in generating responses.
 
-Contextual Understanding: The way tokens are processed allows models to understand context and relationships between words, enhancing their ability to generate coherent and relevant responses.
+Contextual Understanding: The way tokens are processed allows models to understand [[AI Context|context]] and relationships between words, enhancing their ability to generate coherent and relevant responses.
 
 Understanding AI tokens is crucial for effectively utilizing AI models, as they directly impact performance, cost, and the quality of interactions.

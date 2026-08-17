@@ -53,3 +53,5 @@ An Index creation query will look like so
 ```postgresql
 CREATE INDEX combined_version_index on versions (major, minor);
 ```
+
+When using a compound index, make sure you use an index type that supports it.

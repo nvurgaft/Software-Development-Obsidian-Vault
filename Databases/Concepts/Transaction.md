@@ -14,7 +14,7 @@ Under some conditions, transaction may cause [[Transaction Deadlocks|deadlocks]]
 
 In SQL systems, you start a transaction using `BEGIN TRASACTION` or `BEGIN`, do your work and then either `COMMIT` or `ROLLBACK` your work.
 
-Savepoints allow to to take a snapshot of your work up to a certain point, and when a `ROLLBACK` occurs, your work will roll back to the last savepoint.
+Savepoints allow to to take a snapshot of your work up to a certain point, and when a `ROLLBACK` occurs, your work will roll back to the last `SAVEPOINT`.
 #### Examples
 
 ```postgresql
