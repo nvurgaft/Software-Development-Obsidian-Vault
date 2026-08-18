@@ -13,7 +13,7 @@ CREATE TABLE Accounts (
 );
 ```
 
-Another option is to declare the PK using the constraint syntax
+Another option is to declare the PK using the [[Constraints|constraint syntax]]
 
 ```sql
 CREATE TABLE Accounts (
