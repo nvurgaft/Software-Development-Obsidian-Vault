@@ -2,7 +2,12 @@ The N+1 Problem is a common performance problem encountered in systems using ORM
 
 The N+1 problem occurs when an application executes one query to fetch a list of entities and then executes an additional query for each entity to fetch related data, resulting in N+1 queries total.
 
-Example:
+**Example:**
+
+We have an application that has a news section that contains posts made by users.
+Each user can post many posts, and each post has one author (user).
+
+In a naïve approach, to get the authors and posts you will have to perform 1+N `SELECT` operations, which, for a huge corpus of posts would sum to many select queries (each one port a post made by an author) and the entire operation will be slow and taxing on the database.
 
 ```java
 // the .findAll will execute a SELECT
@@ -25,20 +30,39 @@ SELECT * FROM Posts WHERE userId = 3;
 SELECT * FROM Posts WHERE userId = N;
 ```
 
-This is **REALLY BAD** because 
+While a clever developer can observe this phenomenon and avoid it, an ORM may run the 1 select for all the authors and then try to run the other N select for posts per each of the N authors.
 
- 1. This loads the database with many `SELECT` operations and hits performance in both database and the server side.
+We should strive to avoid this behavior  
+
+ 1. This loads the database with many `SELECT` operations and hits performance in both database and the server side. `N+1` means the ORM will make `N+1` round trips to the database.
  2. It takes a longer time to finish than just one correct query.
  3. It doesn't scale well if N is millions of records.
 
-### How to solve this ?
+### How to avoid N+1
 
 Use Joins to get all the data you need 
 
 ```postgresql
 select u.id, p.*
-from Users as u join Posts as p on u.id = p.userId
+from Users as u join Posts as p 
+	on u.id = p.userI
+```
+
+If you know the id's in advance (lets say, you paginate or batch)
+
+```postgresql
+select u.id, p.*
+from Users as u join Posts as p 
+	on u.id = p.userId
 where u.id = 1 or u.id = 2 or ..... or u.id = N
+```
+
+Or use the `IN` keyword
+
+```postgresql
+select *
+from Posts
+where id in (0, 1, 2, 17, 18, 42);
 ```
 
 JPA and Hibernate ORM have a built in feature to handle N+1 called `JOIN FETCH`

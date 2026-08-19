@@ -1,5 +1,7 @@
 The `merge` query allows you to conditionally insert, update or delete records from one table onto another. `merge` consolidates these multiple operations into one single efficient command.
 
+A properly written `MERGE` should be [[Idempotancy|idempotent]].
+
 The `merge` query accepts 
 1. Target Table - The table you need modify.
 2. Source Table - The table containing the new or updated data.

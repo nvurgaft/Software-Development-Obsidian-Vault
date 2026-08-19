@@ -82,6 +82,20 @@ CREATE TABLE products (
 );
 ```
 
+### Default
+
+Default is a constraint used to insert a default value inside a column if no value was specified inside the `INSERT`.
+
+```postgresql
+CREATE TABLE Orders (  
+    order_id integer PRIMARY KEY,  
+    order_number int NOT NULL,  
+    order_date date DEFAULT CURRENT_DATE()  
+);
+```
+
+If now `order_date` is provided, the row will contain the current date returned from `CURRENT_DATE()`.
+This is another way to constrain a non null column.
 ### Primary Key
 
 The [[Primary key]] constraint defines a column or a group of columns to act as a unique identifier inside the table.
