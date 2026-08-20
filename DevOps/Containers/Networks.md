@@ -1,6 +1,6 @@
 Container networking refers to the ability for containers to connect to and communicate with each other, and with non-Docker network services.
 
-Containers have networking enabled by default, and they can make outgoing connections. A container has no information about what kind of network it's attached to, or whether its network peers are also Docker containers. A container only sees a network interface with an IP address, a gateway, a routing table, DNS services, and other networking details.
+[[Containers]] have networking enabled by default, and they can make outgoing connections. A container has no information about what kind of network it's attached to, or whether its network peers are also Docker containers. A container only sees a network interface with an IP address, a gateway, a routing table, DNS services, and other networking details.
 
 To create a network
 

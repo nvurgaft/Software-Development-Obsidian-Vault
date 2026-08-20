@@ -1,4 +1,4 @@
-Docker allows us to create images and spawn containers that can be started, stopped and deleted by request.
+Docker allows us to create images and spawn [[Containers]] that can be started, stopped and deleted by request.
 When you create a container, lets say, a MySQL container that stored rows of tabular data, one this container is stopped, all the stores rows will be deleted and when the container will start up, it will always start at it was when it was created at the first time.
 
 This is an intentional behavior!

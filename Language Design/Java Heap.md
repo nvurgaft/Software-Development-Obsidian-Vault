@@ -20,7 +20,8 @@ private void doSomething() {
 public static void main(String[] args) {
 	
 	doSomething();
-	// by this point doSomething() as already finished and the object reference is not longer accessible, it will be garbage collected soon
+	// by this point doSomething() as already finished and the object reference is not longer accessible, 
+	// it will be garbage collected soon
 }
 ```
 

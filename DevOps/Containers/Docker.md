@@ -1,4 +1,4 @@
-Docker is a popular, all in one container platform with a long-running daemon.
+Docker is a popular, all in one [[Containers|container]] platform with a long-running daemon.
 
 ### Common commands
 

@@ -1,1 +1,1 @@
-This is a personal knowledge base pertaining system design, computer science, software development and other technical things.
+This is a personal knowledge base pertaining system design, computer science, software development, operating systems, AI and other techie stuff. 

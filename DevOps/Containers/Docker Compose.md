@@ -1,4 +1,4 @@
-Docker allows us to deploy applications using multiple containers, entire architectures can be set up using containers and connected by networks.
+Docker allows us to deploy applications using multiple [[Containers]], entire architectures can be set up using containers and connected by networks.
 
 A classic setup is an application container paired with a database container for persistence.
 A more complex case would be a microservice architecture that would also need multiple networks, message queues and cache containers.
