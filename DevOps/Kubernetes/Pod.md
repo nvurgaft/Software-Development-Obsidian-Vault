@@ -1,6 +1,6 @@
 The Pod is the smallest deployable unit in Kubernetes.
 
-A pod is a higher abstraction unit than a [[Container]], a Pod may manage multiple containers as a single unit.
+A pod is a higher abstraction unit than a [[Containers|Container]], a Pod may manage multiple containers as a single unit.
 When running multiple containers as they are, each container is it's own process, running separately as different hosts. Contained processes can communicate by exposing their working process ports.
 When running multiple containers inside a pod, they share a single unique IP address, and containers running inside the Pod use localhost to connect to each other on different ports. 
 

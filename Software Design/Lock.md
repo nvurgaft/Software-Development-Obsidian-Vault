@@ -5,7 +5,6 @@ A lock locks a specific area of code and controls it's access, such area is call
 
 ```java
 public void routine() {
-
 	// multiple threads can access this code and run it at the same time
 	doSomething();
 	
@@ -23,12 +22,10 @@ public void routine() {
 		// and access the try block.  
 		lock.unlock();
 	}
-
 }
 ```
 
 Using this try/catch/finally block pattern is highly recommended because locks must always be released for other threads to take control.
 A resource controlled from un unreleased critical section may become inaccessible, which may lead to a starvation bug.
 
-
-A popular lock implementation in Java the [ReentrantLock](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html) 
+A popular lock implementation in Java is the [ReentrantLock](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/ReentrantLock.html) 
